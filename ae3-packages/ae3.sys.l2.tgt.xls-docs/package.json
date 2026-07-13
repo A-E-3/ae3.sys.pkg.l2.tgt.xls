@@ -1,0 +1,6 @@
+{
+	"type" : "commonjs",
+	"name" : "ae3.sys.l2.tgt.xls-docs",
+	"description" : "AE3 L2 Media Target: XLS (MS Excel), Documentation",
+	"requires" : [ "ae3.web", "ae3.manual" ]
+}
