@@ -1,0 +1,11 @@
+Name: ae3.sys.pkg.l2.tgt.xls
+Info: AE3 L2 Media Target: XLS (MS Excel)
+Requires: \
+	ae3.sdk \
+	clean-java.io \
+
+Provides: \
+	ae3.sys.l2.tgt.xls \
+	--source-process:compile-java \
+	source-process:ae3-packages \
+	export-classpath:java \
