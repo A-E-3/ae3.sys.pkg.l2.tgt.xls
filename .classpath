@@ -5,7 +5,7 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/ae3.api"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ae3.sdk"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/clean-java.io"/>
-	<!-- INCOMPLETE: source also imports jxl.* (JExcelAPI), a genuine external jar dependency -
-	     no bundled jar/lib/ folder found in this repo, not guessing at a path. See CLAUDE.md. -->
+	<classpathentry combineaccessrules="false" kind="src" path="/ae3.pkg.lib.jxl"/>
+	<classpathentry kind="lib" path="/ae3.pkg.lib.jxl/ae3-packages/ae3.pkg.lib.jxl/jars/jxl-2.6.12.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
