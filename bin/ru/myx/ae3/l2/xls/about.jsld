@@ -1,7 +1,0 @@
-{
-	layout : "intl",
-	value : {
-		en : "Русский. This is XLS (MS Excel) renderer. ",
-		ru : "Это XLS (MS Excel) рендерер."
-	}
-}
