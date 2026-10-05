@@ -17,7 +17,7 @@ Root cause traced one level up into `ae3.sys.pkg.i3.web`'s own `WebContextOutput
 repo's own `MAGIC.md`): its descriptor-loading reducer silently drops a target descriptor (no
 logging) on any `Class.forName`/`getConstructor` failure, and `xls.json`'s own descriptor is one
 that isn't making it into the live keyword registry — confirmed via a real, isolated local server
-(`unit-test/magic-tester/verify-ae3-web-dispatch.sh start`), DEBUG-level server logs carrying zero
+(`unit-test/magic-tester/verify-ae3-web-dispatch.test.sh start`), DEBUG-level server logs carrying zero
 trace of any xls-related exception. The exact reason `Class.forName("ru.myx.ae3.l2.xls.WebContextXls")`
 fails inside the live server (the class, its `.getConstructor(TargetInterface.class,
 ServeRequest.class)`, and its own `ae3.pkg.lib.jxl`/`jxl-2.6.12.jar` dependency are all confirmed
