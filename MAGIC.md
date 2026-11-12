@@ -1,5 +1,14 @@
 # MAGIC.md — ae3.sys.pkg.l2.tgt.xls
 
+## A second checkout of this repo holds the uncorrected text (measured 2026-11-04)
+
+`/Volumes/ws-2017/myx-work/source/ae3/ae3.sys.pkg.l2.tgt.xls/` is a checkout of this same repo at the
+same `HEAD` (`0ed0cec`). Its `MAGIC.md` is the committed 25-line version, while this one carries an
+uncommitted staleness note and is 43 lines. `MAGIC.md` is the only dirty path on this side.
+
+- A correction recorded here and uncommitted does not exist there. Reading that copy reports the
+  tier-4 attribution below as live.
+
 ## For keeper-ae3 / magic-tester
 
 **`?___output=xls` never actually reaches `WebContextXls`, 2026-08-26 — found live-verifying
@@ -23,3 +32,12 @@ fails inside the live server (the class, its `.getConstructor(TargetInterface.cl
 ServeRequest.class)`, and its own `ae3.pkg.lib.jxl`/`jxl-2.6.12.jar` dependency are all confirmed
 present on the classpath used) was not pinned down further without instrumenting already-built
 framework code — a stop-and-check-back item, not touched this pass.
+
+**Staleness, measured 2026-11-04: the tier-4 half of this finding no longer holds.** The finding
+stands as written for 2026-08-26, when the wildcard descriptor was still present. `c86495a`
+(2026-10-07) renamed `auto-detect.json` to `xslt-xhtml-detect.json` and dropped its
+`extensions: ["*", "auto-detect"]`, so the wildcard keyword now matches no descriptor.
+`WebContextXmlAutoDetect` is reached at tier 3 instead, by `xslt-xhtml-detect.json`'s
+`contentTypes: ["application/xhtml+xml"]` at `priority: 1.0`. The `X-Debug-Origin:
+WebContextXmlAutoDetect` header the probe read is still the header that path emits. Do not rewrite the
+tier attribution above; it is true of its own date.
